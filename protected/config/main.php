@@ -54,7 +54,7 @@ return array(
 		//'db'=>require(dirname(__FILE__).'/database.php'),
 		
 		'db'=>array(
-				'connectionString'=>'sqlite:/protected/data/blog.db',
+				'connectionString'=>'sqlite:protected/data/blog.db',
 				'tablePrefix'=>'tbl_'
 		),
 		
