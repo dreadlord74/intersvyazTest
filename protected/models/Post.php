@@ -19,6 +19,10 @@
  */
 class Post extends CActiveRecord
 {
+	
+	const STATUS_DRAFT=1;
+    const STATUS_PUBLISHED=2;
+    const STATUS_ARCHIVED=3;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -40,6 +44,7 @@ class Post extends CActiveRecord
 			array('status', 'in', 'range'=>array(1,2,3)),
 			array('tags', 'match', 'pattern'=>'/^[\w\s,]+$/',
 					'message'=>'В тегах можно использовать только буквы.'),
+			array('tags', 'normalizeTags'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('title, status', 'safe', 'on'=>'search'),
@@ -122,6 +127,11 @@ class Post extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+	
+	public function normalizeTags($attribute,$params)
+{
+    $this->tags=Tag::array2string(array_unique(Tag::string2array($this->tags)));
+}
 	
 	public function getUrl()
     {
