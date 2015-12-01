@@ -1,0 +1,16 @@
+2015/12/01 22:11:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii/default/login".' in C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/default/log...')
+#1 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/intersvyazTest/index.php?r=gii/default/login
+---
+2015/12/01 22:11:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "login".' in C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('login')
+#1 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/intersvyazTest/index.php?r=login
+---
