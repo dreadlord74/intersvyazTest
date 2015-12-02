@@ -39,7 +39,7 @@ class CThemeManager extends CApplicationComponent
 	/**
 	 * default themes base path
 	 */
-	const DEFAULT_BASEPATH='themes';
+	const DEFAULT_BASEPATH='public/themes/';
 
 	/**
 	 * @var string the name of the theme class for representing a theme.

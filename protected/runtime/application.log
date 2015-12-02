@@ -1614,3 +1614,33 @@ in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
 in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (70)
 in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (50)
 in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 12:35:33 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "C:\Server\domains\localhost\public_html\yii\intersvyazTest\assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CAssetManager.php:138
+Stack trace:
+#0 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CAssetManager.php(123): CAssetManager->setBasePath('C:\\Server\\domai...')
+#1 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CAssetManager.php(217): CAssetManager->getBasePath()
+#2 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\zii\widgets\grid\CGridView.php(350): CAssetManager->publish('C:\\Server\\domai...')
+#3 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CBaseController.php(147): CGridView->init()
+#4 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#5 C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\views\post\admin.php(68): CBaseController->widget('zii.widgets.gri...', Array)
+#6 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CBaseController.php(126): require('C:\\Server\\domai...')
+#7 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\Server\\domai...', Array, true)
+#8 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\Server\\domai...', Array, true)
+#9 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#10 C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php(184): CController->render('admin', Array)
+#11 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\actions\CInlineAction.php(49): PostController->actionAdmin()
+#12 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#21 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/admin')
+#22 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#23 C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php(15): CApplication->run()
+#24 {main}
+REQUEST_URI=/yii/intersvyazTest/index.php/post/admin
+HTTP_REFERER=http://localhost/yii/intersvyazTest/index.php/site/login
+---
