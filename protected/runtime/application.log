@@ -532,3 +532,428 @@ Stack trace:
 REQUEST_URI=/yii/intersvyazTest/index.php?r=post/create
 HTTP_REFERER=http://localhost/yii/intersvyazTest/index.php?r=post/create
 ---
+2015/12/02 00:12:33 [error] [php] Undefined variable: form (C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\views\post\_form.php:6)
+Stack trace:
+#0 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(869): PostController->renderFile()
+#1 C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\views\post\create.php(18): PostController->renderPartial()
+#2 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CBaseController.php(126): require()
+#3 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CBaseController.php(95): PostController->renderInternal()
+#4 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(869): PostController->renderFile()
+#5 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(782): PostController->renderPartial()
+#6 C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php(74): PostController->render()
+#7 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\actions\CInlineAction.php(49): PostController->actionCreate()
+#8 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilterChain.php(133): PostController->runAction()
+#10 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#13 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#16 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CWebApplication.php(282): PostController->run()
+#17 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#19 C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php(15): CWebApplication->run()
+REQUEST_URI=/yii/intersvyazTest/index.php?r=post/create
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\views\post\_form.php (6)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\views\post\create.php (18)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (74)
+2015/12/02 00:14:26 [warning] [application] Failed to set unsafe attribute "create_time" of "Post".
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (67)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:14:26 [warning] [application] Failed to set unsafe attribute "update_time" of "Post".
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (67)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:14:26 [warning] [application] Failed to set unsafe attribute "author_id" of "Post".
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (67)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:14:26 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 19 NOT NULL constraint failed: tbl_post.author_id. The SQL statement executed was: INSERT INTO 'tbl_post' ("title", "content", "tags", "status") VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (68)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:14:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 19 NOT NULL constraint failed: tbl_post.author_id. The SQL statement executed was: INSERT INTO 'tbl_post' ("title", "content", "tags", "status") VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php(68): CActiveRecord->save()
+#3 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\actions\CInlineAction.php(49): PostController->actionCreate()
+#4 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/create')
+#14 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php(15): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/intersvyazTest/index.php?r=post/create
+HTTP_REFERER=http://localhost/yii/intersvyazTest/index.php?r=post/create
+---
+2015/12/02 00:15:11 [warning] [application] Failed to set unsafe attribute "create_time" of "Post".
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (67)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:15:11 [warning] [application] Failed to set unsafe attribute "update_time" of "Post".
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (67)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:15:11 [warning] [application] Failed to set unsafe attribute "author_id" of "Post".
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (67)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:15:11 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 19 NOT NULL constraint failed: tbl_post.author_id. The SQL statement executed was: INSERT INTO 'tbl_post' ("title", "content", "tags", "status") VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (68)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:15:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 19 NOT NULL constraint failed: tbl_post.author_id. The SQL statement executed was: INSERT INTO 'tbl_post' ("title", "content", "tags", "status") VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php(68): CActiveRecord->save()
+#3 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\actions\CInlineAction.php(49): PostController->actionCreate()
+#4 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/create')
+#14 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php(15): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/intersvyazTest/index.php?r=post/create
+HTTP_REFERER=http://localhost/yii/intersvyazTest/index.php?r=post/create
+---
+2015/12/02 00:15:21 [warning] [application] Failed to set unsafe attribute "create_time" of "Post".
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (67)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:15:21 [warning] [application] Failed to set unsafe attribute "update_time" of "Post".
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (67)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:15:21 [warning] [application] Failed to set unsafe attribute "author_id" of "Post".
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (67)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:15:21 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 19 NOT NULL constraint failed: tbl_post.author_id. The SQL statement executed was: INSERT INTO 'tbl_post' ("title", "content", "tags", "status") VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (68)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:15:21 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 19 NOT NULL constraint failed: tbl_post.author_id. The SQL statement executed was: INSERT INTO 'tbl_post' ("title", "content", "tags", "status") VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php(68): CActiveRecord->save()
+#3 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\actions\CInlineAction.php(49): PostController->actionCreate()
+#4 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/create')
+#14 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php(15): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/intersvyazTest/index.php?r=post/create
+HTTP_REFERER=http://localhost/yii/intersvyazTest/index.php?r=post/create
+---
+2015/12/02 00:15:29 [warning] [application] Failed to set unsafe attribute "create_time" of "Post".
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (67)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:15:29 [warning] [application] Failed to set unsafe attribute "update_time" of "Post".
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (67)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:15:29 [warning] [application] Failed to set unsafe attribute "author_id" of "Post".
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (67)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:15:29 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 19 NOT NULL constraint failed: tbl_post.author_id. The SQL statement executed was: INSERT INTO 'tbl_post' ("title", "content", "tags", "status") VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (68)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:15:29 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 19 NOT NULL constraint failed: tbl_post.author_id. The SQL statement executed was: INSERT INTO 'tbl_post' ("title", "content", "tags", "status") VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php(68): CActiveRecord->save()
+#3 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\actions\CInlineAction.php(49): PostController->actionCreate()
+#4 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/create')
+#14 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php(15): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/intersvyazTest/index.php?r=post/create
+HTTP_REFERER=http://localhost/yii/intersvyazTest/index.php?r=post/create
+---
+2015/12/02 00:18:43 [warning] [application] Failed to set unsafe attribute "create_time" of "Post".
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (67)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:18:43 [warning] [application] Failed to set unsafe attribute "update_time" of "Post".
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (67)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:18:43 [warning] [application] Failed to set unsafe attribute "author_id" of "Post".
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (67)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:18:43 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 19 NOT NULL constraint failed: tbl_post.author_id. The SQL statement executed was: INSERT INTO 'tbl_post' ("title", "content", "tags", "status") VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (68)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:18:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 19 NOT NULL constraint failed: tbl_post.author_id. The SQL statement executed was: INSERT INTO 'tbl_post' ("title", "content", "tags", "status") VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php(68): CActiveRecord->save()
+#3 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\actions\CInlineAction.php(49): PostController->actionCreate()
+#4 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/create')
+#14 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php(15): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/intersvyazTest/index.php?r=post/create
+HTTP_REFERER=http://localhost/yii/intersvyazTest/index.php?r=post/create
+---
+2015/12/02 00:37:03 [error] [system.db.CDbCommand] Error in preparing SQL: PRAGMA table_info('tbl_post')
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (60)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:37:03 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 11 database disk image is malformed. The SQL statement executed was: PRAGMA table_info('tbl_post').
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (60)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:37:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 11 database disk image is malformed. The SQL statement executed was: PRAGMA table_info('tbl_post')' in C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\schema\sqlite\CSqliteSchema.php(134): CDbCommand->queryAll()
+#2 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\schema\sqlite\CSqliteSchema.php(117): CSqliteSchema->findColumns(Object(CDbTableSchema))
+#3 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\schema\CDbSchema.php(103): CSqliteSchema->loadTable('tbl_post')
+#4 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\ar\CActiveRecord.php(2384): CDbSchema->getTable('{{post}}')
+#5 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Post))
+#6 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\ar\CActiveRecord.php(79): CActiveRecord->getMetaData()
+#7 C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php(60): CActiveRecord->__construct()
+#8 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\actions\CInlineAction.php(49): PostController->actionCreate()
+#9 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#18 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/create')
+#19 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#20 C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php(15): CApplication->run()
+#21 {main}
+REQUEST_URI=/yii/intersvyazTest/index.php?r=post/create
+HTTP_REFERER=http://localhost/yii/intersvyazTest/index.php?r=post/index
+---
+2015/12/02 00:37:04 [error] [system.db.CDbCommand] Error in preparing SQL: PRAGMA table_info('tbl_post')
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\views\post\index.php (20)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (123)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:37:04 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 11 database disk image is malformed. The SQL statement executed was: PRAGMA table_info('tbl_post').
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\views\post\index.php (20)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (123)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:37:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 11 database disk image is malformed. The SQL statement executed was: PRAGMA table_info('tbl_post')' in C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\schema\sqlite\CSqliteSchema.php(134): CDbCommand->queryAll()
+#2 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\schema\sqlite\CSqliteSchema.php(117): CSqliteSchema->findColumns(Object(CDbTableSchema))
+#3 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\schema\CDbSchema.php(103): CSqliteSchema->loadTable('tbl_post')
+#4 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\ar\CActiveRecord.php(2384): CDbSchema->getTable('{{post}}')
+#5 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Post))
+#6 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\ar\CActiveRecord.php(661): CActiveRecord->getMetaData()
+#7 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\ar\CActiveRecord.php(1606): CActiveRecord->getTableSchema()
+#8 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#9 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#10 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#11 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#12 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#13 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#14 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CBaseController.php(147): CListView->init()
+#15 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#16 C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\views\post\index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#17 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CBaseController.php(126): require('C:\\Server\\domai...')
+#18 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\Server\\domai...', Array, true)
+#19 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\Server\\domai...', Array, true)
+#20 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#21 C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php(123): CController->render('index', Array)
+#22 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#23 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#24 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#25 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#26 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#27 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#28 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#29 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(291): CFilterChain->run()
+#30 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#31 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#32 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/index')
+#33 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#34 C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php(15): CApplication->run()
+#35 {main}
+REQUEST_URI=/yii/intersvyazTest/index.php?r=post/index
+HTTP_REFERER=http://localhost/yii/intersvyazTest/index.php?r=post/admin
+---
+2015/12/02 00:37:05 [error] [system.db.CDbCommand] Error in preparing SQL: PRAGMA table_info('tbl_post')
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (131)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:37:05 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 11 database disk image is malformed. The SQL statement executed was: PRAGMA table_info('tbl_post').
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (131)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:37:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 11 database disk image is malformed. The SQL statement executed was: PRAGMA table_info('tbl_post')' in C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\schema\sqlite\CSqliteSchema.php(134): CDbCommand->queryAll()
+#2 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\schema\sqlite\CSqliteSchema.php(117): CSqliteSchema->findColumns(Object(CDbTableSchema))
+#3 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\schema\CDbSchema.php(103): CSqliteSchema->loadTable('tbl_post')
+#4 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\ar\CActiveRecord.php(2384): CDbSchema->getTable('{{post}}')
+#5 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Post))
+#6 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\ar\CActiveRecord.php(79): CActiveRecord->getMetaData()
+#7 C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php(131): CActiveRecord->__construct('search')
+#8 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\actions\CInlineAction.php(49): PostController->actionAdmin()
+#9 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#18 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/admin')
+#19 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#20 C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php(15): CApplication->run()
+#21 {main}
+REQUEST_URI=/yii/intersvyazTest/index.php?r=post/admin
+HTTP_REFERER=http://localhost/yii/intersvyazTest/index.php?r=post/create
+---
+2015/12/02 00:37:19 [error] [system.db.CDbCommand] Error in preparing SQL: PRAGMA table_info('tbl_post')
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\views\post\index.php (20)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (123)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:37:19 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 11 database disk image is malformed. The SQL statement executed was: PRAGMA table_info('tbl_post').
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\views\post\index.php (20)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (123)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:37:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 11 database disk image is malformed. The SQL statement executed was: PRAGMA table_info('tbl_post')' in C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\schema\sqlite\CSqliteSchema.php(134): CDbCommand->queryAll()
+#2 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\schema\sqlite\CSqliteSchema.php(117): CSqliteSchema->findColumns(Object(CDbTableSchema))
+#3 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\schema\CDbSchema.php(103): CSqliteSchema->loadTable('tbl_post')
+#4 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\ar\CActiveRecord.php(2384): CDbSchema->getTable('{{post}}')
+#5 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Post))
+#6 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\ar\CActiveRecord.php(661): CActiveRecord->getMetaData()
+#7 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\ar\CActiveRecord.php(1606): CActiveRecord->getTableSchema()
+#8 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#9 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#10 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#11 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#12 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#13 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#14 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CBaseController.php(147): CListView->init()
+#15 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#16 C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\views\post\index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#17 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CBaseController.php(126): require('C:\\Server\\domai...')
+#18 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\Server\\domai...', Array, true)
+#19 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\Server\\domai...', Array, true)
+#20 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#21 C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php(123): CController->render('index', Array)
+#22 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#23 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#24 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#25 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#26 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#27 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#28 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#29 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(291): CFilterChain->run()
+#30 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#31 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CWebApplication.php(282): CController->run('')
+#32 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post')
+#33 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#34 C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php(15): CApplication->run()
+#35 {main}
+REQUEST_URI=/yii/intersvyazTest/index.php?r=post
+---
+2015/12/02 00:37:26 [error] [system.db.CDbCommand] Error in preparing SQL: PRAGMA table_info('tbl_post')
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\views\post\index.php (20)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (123)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:37:26 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 11 database disk image is malformed. The SQL statement executed was: PRAGMA table_info('tbl_post').
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\views\post\index.php (20)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (123)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:37:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 11 database disk image is malformed. The SQL statement executed was: PRAGMA table_info('tbl_post')' in C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\schema\sqlite\CSqliteSchema.php(134): CDbCommand->queryAll()
+#2 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\schema\sqlite\CSqliteSchema.php(117): CSqliteSchema->findColumns(Object(CDbTableSchema))
+#3 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\schema\CDbSchema.php(103): CSqliteSchema->loadTable('tbl_post')
+#4 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\ar\CActiveRecord.php(2384): CDbSchema->getTable('{{post}}')
+#5 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Post))
+#6 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\ar\CActiveRecord.php(661): CActiveRecord->getMetaData()
+#7 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\db\ar\CActiveRecord.php(1606): CActiveRecord->getTableSchema()
+#8 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#9 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#10 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#11 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#12 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#13 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#14 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CBaseController.php(147): CListView->init()
+#15 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#16 C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\views\post\index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#17 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CBaseController.php(126): require('C:\\Server\\domai...')
+#18 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\Server\\domai...', Array, true)
+#19 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\Server\\domai...', Array, true)
+#20 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#21 C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php(123): CController->render('index', Array)
+#22 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#23 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#24 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#25 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#26 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#27 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#28 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#29 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(291): CFilterChain->run()
+#30 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#31 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CWebApplication.php(282): CController->run('')
+#32 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post')
+#33 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#34 C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php(15): CApplication->run()
+#35 {main}
+REQUEST_URI=/yii/intersvyazTest/index.php?r=post
+---
+2015/12/02 00:42:29 [warning] [application] Failed to set unsafe attribute "create_time" of "Post".
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (67)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:42:29 [warning] [application] Failed to set unsafe attribute "update_time" of "Post".
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (67)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:42:29 [warning] [application] Failed to set unsafe attribute "author_id" of "Post".
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (67)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:42:54 [warning] [application] Failed to set unsafe attribute "create_time" of "Post".
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (67)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:42:54 [warning] [application] Failed to set unsafe attribute "update_time" of "Post".
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (67)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 00:42:54 [warning] [application] Failed to set unsafe attribute "author_id" of "Post".
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (67)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
