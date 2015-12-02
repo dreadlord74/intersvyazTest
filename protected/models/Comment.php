@@ -117,6 +117,11 @@ class Comment extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+	
+	public function approve(){
+		$this->status=Comment::STATUS_APPROVED;
+		$this->update(array('status'));
+	}
 
 	/**
 	 * Returns the static model of the specified AR class.

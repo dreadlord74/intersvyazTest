@@ -2,6 +2,18 @@
 
 class CommentController extends Controller
 {
+	
+	public function actionApprove(){
+		if(Yii::app()->request->isPostRequest)
+		{
+			$comment=$this->loadModel();
+			$comment->approve();
+			$this->redirect(array('index'));
+		}
+		else
+			throw new CHttpException(400,'Invalid request...');
+	}
+	
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
@@ -122,10 +134,16 @@ class CommentController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Comment');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-		));
+		$dataProvider=new CActiveDataProvider('Comment', array(
+        'criteria'=>array(
+            'with'=>'post',
+            'order'=>'t.status, t.create_time DESC',
+        ),
+    ));
+ 
+    $this->render('index',array(
+        'dataProvider'=>$dataProvider,
+    ));
 	}
 
 	/**
