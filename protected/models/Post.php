@@ -19,6 +19,17 @@
  */
 class Post extends CActiveRecord
 {
+	//метод для добавления комментариев
+	public function addComment($comment){
+		
+		if(Yii::app()->params['commentNeedApproval'])
+			$comment->status=Comment::STATUS_PENDING;
+		else
+			$comment->status=Comment::STATUS_APPROVED;
+		$comment->post_id=$this->id;
+		return $comment->save();
+    }
+	
 	//будет выполнено после удаления записи
 	protected function afterDelete()
 	{
@@ -66,13 +77,13 @@ class Post extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'author' => array(self::BELONGS_TO, 'User', 'author_id'),
-			'comments' => array(self::HAS_MANY, 'Comment', 'post_id',
-				'condition'=>'comments.status='.Comment::STATUS_APPROVED,
-				'order'=>'comments.create_time DESC'),
-			'commentCount'=>array(self::STAT, 'Comment', 'post_id',
-				'condition'=>'status='.Comment::STATUS_APPROVED),
-		);
+        'author' => array(self::BELONGS_TO, 'User', 'author_id'),
+        'comments' => array(self::HAS_MANY, 'Comment', 'post_id',
+            'condition'=>'comments.status='.Comment::STATUS_APPROVED,
+            'order'=>'comments.create_time DESC'),
+        'commentCount' => array(self::STAT, 'Comment', 'post_id',
+            'condition'=>'status='.Comment::STATUS_APPROVED),
+    );
 	}
 
 	/**
