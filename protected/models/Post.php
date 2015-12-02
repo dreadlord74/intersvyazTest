@@ -19,6 +19,13 @@
  */
 class Post extends CActiveRecord
 {
+	//будет выполнено после удаления записи
+	protected function afterDelete()
+	{
+		parent::afterDelete();
+		Comment::model()->deleteAll('post_id='.$this->id);
+		Tag::model()->updateFrequency($this->tags, '');
+	}
 	
 	const STATUS_DRAFT=1;
     const STATUS_PUBLISHED=2;
