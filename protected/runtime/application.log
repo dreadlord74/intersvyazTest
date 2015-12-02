@@ -984,3 +984,44 @@ Stack trace:
 #14 {main}
 REQUEST_URI=/yii/intersvyazTest/index.php?r=post/view&id=124
 ---
+2015/12/02 09:34:14 [warning] [application] Failed to set unsafe attribute "id" of "Post".
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (147)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 09:34:14 [warning] [application] Failed to set unsafe attribute "create_time" of "Post".
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (147)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 09:34:14 [warning] [application] Failed to set unsafe attribute "update_time" of "Post".
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (147)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 09:34:14 [warning] [application] Failed to set unsafe attribute "author_id" of "Post".
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (147)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 09:36:50 [warning] [application] Failed to set unsafe attribute "create_time" of "Post".
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (68)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 09:36:50 [warning] [application] Failed to set unsafe attribute "update_time" of "Post".
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (68)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 09:36:50 [warning] [application] Failed to set unsafe attribute "author_id" of "Post".
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (68)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 09:37:09 [warning] [application] Failed to set unsafe attribute "id" of "Post".
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (147)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 09:37:09 [warning] [application] Failed to set unsafe attribute "create_time" of "Post".
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (147)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 09:37:09 [warning] [application] Failed to set unsafe attribute "update_time" of "Post".
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (147)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 09:37:09 [warning] [application] Failed to set unsafe attribute "author_id" of "Post".
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\protected\controllers\PostController.php (147)
+in C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php (15)
+2015/12/02 09:39:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "posts".' in C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('posts')
+#1 C:\Server\domains\localhost\public_html\yii\intersvyazTest\vendor\yiisoft\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\Server\domains\localhost\public_html\yii\intersvyazTest\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/intersvyazTest/index.php?r=posts
+---
