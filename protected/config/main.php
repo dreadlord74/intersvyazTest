@@ -6,6 +6,7 @@
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
 return array(
+	'defaultController'=>'post',
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'My Web Application',
 
@@ -55,7 +56,13 @@ return array(
 		
 		'db'=>array(
 				'connectionString'=>'sqlite:protected/data/blog.db',
-				'tablePrefix'=>'tbl_'
+				'tablePrefix'=>'tbl_',
+				'class'=>'system.db.CDbConnection',
+				'schemaCachingDuration'=>3600
+		),
+		
+		'chache'=>array(
+			'class'=>'CDbChache'
 		),
 		
 		'errorHandler'=>array(
@@ -64,20 +71,14 @@ return array(
 		),
 
 		'log'=>array(
-			'class'=>'CLogRouter',
-			'routes'=>array(
-				array(
-					'class'=>'CFileLogRoute',
-					'levels'=>'error, warning',
-				),
-				// uncomment the following to show log messages on web pages
-				/*
-				array(
-					'class'=>'CWebLogRoute',
-				),
-				*/
-			),
-		),
+            'class'=>'CLogRouter',
+            'routes'=>array(
+                array(
+                    'class'=>'CFileLogRoute',
+                    'levels'=>'error, warning',
+                ),
+            ),
+        ),
 
 	),
 
